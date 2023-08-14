@@ -17,7 +17,7 @@ abstract class ArticleDataBase : RoomDatabase() {
         fun Application.initiateArticleDataaBase(): ArticleDataBase {
             return runCatching { instanceArticleDatabase }.getOrElse {
                 synchronized(Lock) {
-                    createDataBase(this).also { instanceArticleDatabase }
+                    createDataBase(this).also { instanceArticleDatabase= it }
                 }
             }
         }
