@@ -24,7 +24,7 @@ fun HomeScreen(homeViewModel: HomeViewModel , navController: NavController){
     Scaffold (
         floatingActionButtonPosition = FabPosition.Center,
         floatingActionButton = {
-           Button(onClick = { navController.navigate("detail") }) {
+           Button(onClick = { navController.navigate("details") }) {
                Text(text = "Navigate")
            }
         }

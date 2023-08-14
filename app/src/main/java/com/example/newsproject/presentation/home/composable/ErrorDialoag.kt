@@ -13,8 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ErrorDialog(showDialog : Boolean, massage: String, onConfirmClic:()->Unit, onDismiss :()->Unit){
-       if (showDialog) return
+fun ErrorDialog(showDialog : Boolean= false, massage: String, onConfirmClic:()->Unit, onDismiss :()->Unit){
+       if (!showDialog) return
            AlertDialog(
                title = {
                        Row {

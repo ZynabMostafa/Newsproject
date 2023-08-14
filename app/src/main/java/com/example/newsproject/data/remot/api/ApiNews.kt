@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface ApiNews  {
 
     companion object{
-        const val BASE_URL = "https://newsapi.org/v2/"
+        const val BASE_URL = " https://newsapi.org/v2/"
         const val API_KEY = "86ce30105ef2495883155e8940a2f311"
     }
 

@@ -11,7 +11,7 @@ import com.example.newsproject.data.remot.model.newsmodel.Article
 abstract class ArticleDataBase : RoomDatabase() {
     abstract fun articleDao(): ArticleDao
     companion object {
-
+            @Volatile
         private lateinit var instanceArticleDatabase: ArticleDataBase
         private val Lock = Any()
         fun Application.initiateArticleDataaBase(): ArticleDataBase {

@@ -21,15 +21,15 @@ class HomeViewModel : ViewModel() {
     fun get() {
         _status.update { it.copy(isLoading = true) }
 
-        kotlin.runCatching {
             viewModelScope.launch {
+              kotlin.runCatching {
+                Repo.getNews("bitcoin")
                 _status.update {
                     it.copy(
                         isLoading = false,
-                        list = Repo.getNews("tesla")
+                        list = Repo.getNews("bitcoin")
                     )
                 }
-            }
         }.getOrElse { error ->
             _status.update {
                 it.copy(
@@ -38,6 +38,7 @@ class HomeViewModel : ViewModel() {
                 )
             }
         }
+            }
 
     }
 

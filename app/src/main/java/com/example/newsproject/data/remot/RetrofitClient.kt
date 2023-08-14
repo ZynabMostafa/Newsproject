@@ -18,8 +18,8 @@ class RetrofitClient
         private val retrofitClient by lazy {
             Retrofit
                 .Builder()
-                .client(client)
                 .baseUrl(ApiNews.BASE_URL)
+                .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }
